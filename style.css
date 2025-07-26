@@ -1,0 +1,182 @@
+:root {
+  --primary-color: #f39c12;
+  --text-color: #333;
+  --bg-color: #ffffff;
+  --accent-bg: #fdfdfd;
+  --hover-color: #e67e22;
+  --card-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+  --transition-speed: 0.3s;
+}
+
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  font-family: "Inter", sans-serif;
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+  transition: background-color var(--transition-speed),
+    color var(--transition-speed);
+}
+
+header {
+  background-color: var(--primary-color);
+  color: #fff;
+  text-align: center;
+  padding: 2rem 1rem;
+  box-shadow: var(--card-shadow);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+h1 {
+  font-size: 2.7rem;
+  margin: 0;
+  letter-spacing: 1px;
+}
+
+h2 {
+  font-weight: normal;
+  font-size: 1.4rem;
+  color: #fff7dd;
+  margin-top: 0.5rem;
+}
+
+main {
+  max-width: 900px;
+  margin: 2rem auto;
+  padding: 1rem;
+  animation: fadeIn 1s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+section {
+  background-color: var(--accent-bg);
+  padding: 2rem;
+  margin-bottom: 2rem;
+  border-radius: 16px;
+  box-shadow: var(--card-shadow);
+  transition: transform var(--transition-speed),
+    box-shadow var(--transition-speed);
+}
+
+section:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+}
+
+h3 {
+  color: var(--primary-color);
+  margin-top: 0;
+  font-size: 1.6rem;
+  border-bottom: 2px solid var(--primary-color);
+  display: inline-block;
+  padding-bottom: 0.3rem;
+}
+
+ul {
+  padding-left: 1.2rem;
+}
+
+a {
+  color: var(--primary-color);
+  text-decoration: none;
+  transition: color var(--transition-speed);
+}
+
+a:hover {
+  color: var(--hover-color);
+  text-decoration: underline;
+}
+
+.whatsapp-btn {
+  display: inline-block;
+  margin-top: 1rem;
+  background-color: #25d366;
+  color: white;
+  padding: 0.8rem 1.4rem;
+  border-radius: 8px;
+  font-weight: bold;
+  text-decoration: none;
+  box-shadow: var(--card-shadow);
+  transition: background-color var(--transition-speed);
+}
+
+.whatsapp-btn:hover {
+  background-color: #1ebd5a;
+}
+
+.toggle-btn {
+  margin-top: 1rem;
+  padding: 0.6rem 1.2rem;
+  background-color: #eee;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color var(--transition-speed);
+}
+
+.toggle-btn:hover {
+  background-color: #ddd;
+}
+
+footer {
+  background-color: #f1f1f1;
+  color: #888;
+  text-align: center;
+  padding: 1rem;
+  font-size: 0.9rem;
+  border-top: 1px solid #ddd;
+}
+
+/* 🌙 DARK MODE STYLING */
+body.dark-mode {
+  background-color: #121212;
+  color: #f0f0f0;
+}
+
+body.dark-mode header {
+  background-color: #1e1e1e;
+  color: #fff;
+}
+
+body.dark-mode section {
+  background-color: #1d1d1d;
+  box-shadow: 0 2px 6px rgba(255, 255, 255, 0.04);
+}
+
+body.dark-mode a {
+  color: #f39c12;
+}
+
+body.dark-mode footer {
+  background-color: #1e1e1e;
+  color: #aaa;
+}
+
+#button {
+  display: none;
+  position: fixed;
+  bottom: 30px;
+  right: 20px;
+  padding: 10px 15px;
+  background-color: var(--primary-color);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  z-index: 999;
+}
